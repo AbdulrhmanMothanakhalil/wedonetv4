@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+header .btn {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    background: #f8f8f8;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+}
+
+.hero-text .btn {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.work {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.work-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.work-gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.services {
+    padding: 50px 0;
+    background: #f8f8f8;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services-list span {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.clients {
+    padding: 50px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.clients-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.clients-logos img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.cta {
+    padding: 50px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 20px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+footer .social a {
+    margin: 0 10px;
+}
+
+footer .social img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        flex: unset;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .work-gallery, .services-list, .clients-logos {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+
+    .services-list span {
+        padding: 5px 10px;
+    }
+}

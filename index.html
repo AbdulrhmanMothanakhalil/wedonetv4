@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeDonet</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .slide {
+            flex: 0 0 auto;
+            width: 150px; /* Adjust width */
+            margin-right: 16px; /* Adjust spacing between items */
+            text-align: center;
+        }
+        .slide i {
+            font-size: 2rem; /* Adjust icon size */
+            margin-bottom: 8px;
+        }
+        .slide span {
+            display: block;
+            font-size: 0.875rem; /* Adjust text size */
+            font-weight: 600;
+        }
+        .full-screen-image {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <header class="bg-white border-b">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-bold"><span class="text-blue-800">WE</span>DONET.</h1>
+            <nav x-data="{ open: false }" class="relative">
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="text-gray-700">Home</a>
+                    <a href="about.html" class="text-gray-700">About</a>
+                    <a href="talent.html" class="text-gray-700">Hire talents</a>
+                    <a href="#" class="text-gray-700">Blog</a>
+                    <a href="#" class="bg-blue-800 text-white px-4 py-2 rounded">Register</a>
+                </div>
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-gray-700 focus:outline-none">
+                        <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl md:hidden">
+                    <a href="#" class="block px-4 py-2 text-gray-700">Home</a>
+                    <a href="about.html" class="block px-4 py-2 text-gray-700">About</a>
+                    <a href="talent.html" class="block px-4 py-2 text-gray-700">Hire talents</a>
+                    <a href="#" class="block px-4 py-2 text-gray-700">Blog</a>
+                    <a href="#" class="block px-4 py-2  bg-blue-800 text-white">Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="flex flex-col md:flex-row items-center bg-gray-100 py-16 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl font-bold mb-4">We Connect Freelancers in Iraq</h2>
+                <p class="mb-4">At WeDoNet, We Connect Freelancers in Iraq with Local and International Clients. Show best visuals, whether you're a skilled developer, a creative designer, a proficient writer, or a knowledgeable consultant, our platform is designed to help you find the perfect projects that match your expertise.</p>
+                <a href="#" class="bg-blue-800 text-white px-4 py-2 rounded">Find Job Now</a>
+
+            </div>
+            <div class="md:w-1/2 ">
+                <img src="undraw_real_time_analytics_re_yliv.svg" alt="Freelancers" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen bg-cover bg-center" style="background-image: url('unsplash_NNtDWlJXpKU.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-center px-6 md:px-12">
+                <h2 class="text-white text-lg md:text-4xl mb-4 pt-20 text-opacity-70 md:pt-40">
+                    We are connecting freelancers in 30+ freelancing services with the clients locally and globally
+                </h2>
+                <div class="flex flex-col md:flex-row md:space-x-4 items-center justify-center pt-20 md:pt-40">
+                    <div class="text-row text-white flex items-center mb-2">
+                        <i class="fas fa-square text-sm mr-2"></i>
+                        <span class="text-sm md:text-xl">Our purpose: Diversity and sustainability</span>
+                    </div>
+                    <div class="text-row text-white flex items-center mb-2">
+                        <i class="fas fa-square text-sm mr-2"></i>
+                        <span class="text-sm md:text-xl">Our power: Our global community</span>
+                    </div>
+                    <div class="text-row text-white flex items-center mb-2">
+                        <i class="fas fa-square text-sm mr-2"></i>
+                        <span class="text-sm md:text-xl">Our passion: Our annual film festival</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Work</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <img src="g1.jpg" alt="BBC" class="w-full">
+                <img src="g2.jpg" alt="National Geographic" class="w-full">
+                <img src="g3.png" alt="Bloomberg" class="w-full">
+                <img src="g4.png" alt="Netflix" class="w-full">
+                <img src="g5.png" alt="Aveda" class="w-full">
+                <img src="g6.png" alt="Twitch" class="w-full">
+                <img src="g7.png" alt="Gojek" class="w-full">
+                <img src="g8.png" alt="Dubai" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8 ">Our Services</h2>
+            <div class="slider-container">
+                <div id="slider" class="slider">
+                    <!-- Duplicate slides for seamless looping -->
+                    <div class="slide">
+                        <i class="fas fa-camera text-blue-800"></i>
+                        <span>Photo Production</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-video text-blue-800"></i>
+                        <span>Video Production</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-film text-blue-800"></i>
+                        <span>Film & Commercial Direction</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-volume-up text-blue-800"></i>
+                        <span>Voice Over</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-code text-blue-800"></i>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-pencil-alt  text-blue-800"></i>
+                        <span>Content Creation</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-paint-brush  text-blue-800"></i>
+                        <span>Graphic Design</span>
+                    </div>
+                    <!-- Duplicate slides -->
+                    <div class="slide">
+                        <i class="fas fa-camera  text-blue-800"></i>
+                        <span>Photo Production</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-video  text-blue-800"></i>
+                        <span>Video Production</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-film  text-blue-800"></i>
+                        <span>Film & Commercial Direction</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-volume-up  text-blue-800"></i>
+                        <span>Voice Over</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-code  text-blue-800"></i>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-pencil-alt text-blue-800"></i>
+                        <span>Content Creation</span>
+                    </div>
+                    <div class="slide">
+                        <i class="fas fa-paint-brush text-blue-800"></i>
+                        <span>Graphic Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Happy Clients</h2>
+            <p class="mb-8">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <img src="google.png" alt="Google" class="w-24">
+                <img src="dribbble.png" alt="Dribbble" class="w-24">
+                <img src="linkedin.png" alt="LinkedIn" class="w-24">
+                <img src="amazon.png" alt="Amazon" class="w-24">
+                <img src="medium.png" alt="Medium" class="w-24">
+                <img src="spotify.png" alt="Spotify" class="w-24">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4 text-black">Do you looking for a talent or more?</h2>
+            <p class="mb-8 text-black">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            <a href="#" class="bg-blue-800 text-white px-4 py-2 rounded">Let's work Together</a>
+        </div>
+    </section>
+
+    <footer class="bg-blue-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Add Logo Image Here -->
+            <img src="logo.jpg" alt="WEDONET Logo" class="w-24 mx-auto mb-4">
+    
+            <h2 class="text-2xl font-bold mb-4">WEDONET.</h2>
+            <p class="mb-4">We're a diverse and passionate team that takes ownership of your design and empowers you to execute the roadmap. We stay light on our feet and truly enjoy delivering great work.</p>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#"><i class="fab fa-facebook-f w-5"></i></a>
+                <a href="#"><i class="fab fa-twitter w-5"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in w-5"></i></a>
+                <a href="#"><i class="fab fa-instagram w-5"></i></a>
+            </div>
+            
+            <p>&copy; 2024 WEDONET. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        const slider = document.getElementById('slider');
+        let offset = 0;
+        const slideWidth = document.querySelector('.slide').offsetWidth + 16; // Slide width + margin
+        const slides = document.querySelectorAll('.slide').length;
+        
+        function slide() {
+            offset += slideWidth;
+            if (offset >= slideWidth * (slides / 2)) {
+                offset = 0;
+            }
+            slider.style.transform = `translateX(-${offset}px)`;
+        }
+
+        setInterval(slide, 2000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
